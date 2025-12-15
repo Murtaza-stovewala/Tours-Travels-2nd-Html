@@ -2,12 +2,6 @@
 
 > **Tavelo** is a modern, fully responsive travel booking website built with vanilla HTML, CSS, and JavaScript. It provides a seamless user experience for browsing and booking flights, hotels, and tours across India.
 
-![Author](https://img.shields.io/badge/Author-Abdulqadir%20Bearingwala-cyan)
-![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
-![HTML](https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-06B6D4?logo=tailwindcss&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
-
 ---
 
 ## 📋 Table of Contents
