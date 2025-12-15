@@ -1,5 +1,7 @@
 # Tavelo - Travel Booking Platform
 
+🌐 **Live Demo**: [https://tours-travels-2nd-html.vercel.app/](https://tours-travels-2nd-html.vercel.app/)
+
 > **Tavelo** is a modern, fully responsive travel booking website built with vanilla HTML, CSS, and JavaScript. It provides a seamless user experience for browsing and booking flights, hotels, and tours across India.
 
 ![Author](https://img.shields.io/badge/Author-Murtaza%20StoveWala-cyan)
