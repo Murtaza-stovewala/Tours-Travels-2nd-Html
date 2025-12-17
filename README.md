@@ -1,4 +1,4 @@
-# 🚀 Tavelo - Travel Booking Platform
+# 🚀 Tavelo - Travel & Tourism Website
 
 🌐 **Live Demo**: [https://tours-travels-2nd-html.vercel.app/](https://tours-travels-2nd-html.vercel.app/)
 
