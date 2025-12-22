@@ -1,0 +1,50 @@
+/* 
+ * Tavelo Main Stylesheet
+ * Contains extracted custom styles and animations.
+ * Tailwind CSS is used for utility classes.
+ */
+
+/* =========================================
+   Animations
+   ========================================= */
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+/* =========================================
+   Page Specific Backgrounds
+   ========================================= */
+
+/* Index / Home Page */
+.page-home .hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1514565131-fce0801e5785?w=1920&q=80');
+}
+
+/* Tours Page */
+.page-tours .hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1514565131-fce0801e5785?w=1920&q=80');
+}
+
+/* Flights Page */
+.page-flights .hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1514565131-fce0801e5785?w=1920&q=80');
+}
+
+/* Hotels Page */
+.page-hotels .hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1514565131-fce0801e5785?w=1920&q=80');
+}

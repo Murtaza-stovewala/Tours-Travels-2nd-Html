@@ -19,36 +19,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <style>
-        @keyframes marquee {
-            0% {
-                transform: translateX(0%);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .animate-marquee {
-            animation: marquee 30s linear infinite;
-        }
-
-        .animate-marquee:hover {
-            animation-play-state: paused;
-        }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="bg-white pb-20 md:pb-0">
+<body class="bg-white pb-20 md:pb-0 page-home">
     <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
     <section class="relative min-h-[600px] flex items-center justify-center pt-24 md:pt-0">
         <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style="background-image: url('https://images.unsplash.com/photo-1514565131-fce0801e5785?w=1920&q=80');">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat hero-bg">
             <div class="absolute inset-0 bg-blue-900/80"></div>
         </div>
 
