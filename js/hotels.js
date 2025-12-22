@@ -245,9 +245,8 @@ function renderHotels() {
       (hotel) => `
     <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group border border-gray-100 flex flex-col">
       <div class="relative h-64 overflow-hidden">
-        <img src="${hotel.image}" alt="${
-        hotel.name
-      }" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <img src="${hotel.image}" alt="${hotel.name
+        }" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
         <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-cyan-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
           ${hotel.type}
         </div>
@@ -255,9 +254,8 @@ function renderHotels() {
       <div class="p-6 flex flex-col flex-grow">
         <div class="flex justify-between items-start mb-2">
           <div>
-            <h3 class="text-xl font-bold text-gray-800 mb-1 group-hover:text-cyan-600 transition-colors">${
-              hotel.name
-            }</h3>
+            <h3 class="text-xl font-bold text-gray-800 mb-1 group-hover:text-cyan-600 transition-colors">${hotel.name
+        }</h3>
             <div class="flex items-center text-sm text-gray-500">
               <svg class="h-4 w-4 mr-1 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
@@ -270,12 +268,12 @@ function renderHotels() {
 
         <div class="flex flex-wrap gap-2 mb-4 mt-3">
           ${hotel.tags
-            .map(
-              (tag) => `
+          .map(
+            (tag) => `
             <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md">${tag}</span>
           `
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
 
         <div class="flex items-center gap-2 mb-6">
@@ -290,12 +288,11 @@ function renderHotels() {
           <div>
             <p class="text-sm text-gray-500">From</p>
             <p class="text-xl font-bold text-gray-800">₹${hotel.price.toLocaleString(
-              "en-IN"
-            )}<span class="text-sm font-normal text-gray-500"> / night</span></p>
+            "en-IN"
+          )}<span class="text-sm font-normal text-gray-500"> / night</span></p>
           </div>
-          <a href="hotel-detail.html?slug=${
-            hotel.slug
-          }" class="bg-cyan-500 hover:bg-cyan-600 text-white rounded-full px-6 py-2 font-medium">
+          <a href="hotel-detail.html?slug=${hotel.slug
+        }" class="bg-cyan-500 hover:bg-cyan-600 text-white rounded-full px-6 py-2 font-medium">
             Book
           </a>
         </div>

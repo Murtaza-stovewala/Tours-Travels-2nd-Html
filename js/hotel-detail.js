@@ -78,9 +78,8 @@ function renderHotelContent() {
         <span class="w-1 h-8 bg-cyan-500 rounded-full mr-3"></span>
         Overview
       </h2>
-      <p class="text-gray-600 leading-relaxed text-lg">${
-        currentHotel.overview
-      }</p>
+      <p class="text-gray-600 leading-relaxed text-lg">${currentHotel.overview
+    }</p>
     </section>
 
     <!-- Rooms -->
@@ -91,8 +90,8 @@ function renderHotelContent() {
       </h2>
       <div class="space-y-6">
         ${currentHotel.rooms
-          .map(
-            (room) => `
+      .map(
+        (room) => `
           <div class="flex flex-col sm:flex-row overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow rounded-2xl group bg-white">
             <div class="w-full sm:w-1/3 bg-slate-100 relative min-h-[150px] flex items-center justify-center">
               <svg class="h-12 w-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,9 +101,8 @@ function renderHotelContent() {
             <div class="p-6 flex-grow flex flex-col justify-between">
               <div>
                 <div class="flex justify-between items-start mb-2">
-                  <h3 class="font-bold text-xl text-gray-800 group-hover:text-cyan-600 transition-colors">${
-                    room.name
-                  }</h3>
+                  <h3 class="font-bold text-xl text-gray-800 group-hover:text-cyan-600 transition-colors">${room.name
+          }</h3>
                 </div>
                 <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-600 mt-2">
                   <div class="flex items-center gap-1.5">
@@ -124,12 +122,12 @@ function renderHotelContent() {
                   <p class="text-sm font-medium text-gray-700 mb-1">Includes:</p>
                   <div class="flex flex-wrap gap-2">
                     ${room.features
-                      .map(
-                        (f) => `
+            .map(
+              (f) => `
                       <span class="text-xs bg-cyan-50 text-cyan-700 px-2 py-1 rounded-md border border-cyan-100">${f}</span>
                     `
-                      )
-                      .join("")}
+            )
+            .join("")}
                   </div>
                 </div>
               </div>
@@ -147,8 +145,8 @@ function renderHotelContent() {
             </div>
           </div>
         `
-          )
-          .join("")}
+      )
+      .join("")}
       </div>
     </section>
 
@@ -160,8 +158,8 @@ function renderHotelContent() {
       </h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-6 gap-x-4">
         ${currentHotel.amenities
-          .map(
-            (amenity) => `
+      .map(
+        (amenity) => `
           <div class="flex items-center gap-3 group">
             <div class="p-2 bg-cyan-50 rounded-lg group-hover:bg-cyan-100 transition-colors">
               <svg class="h-5 w-5 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -171,8 +169,8 @@ function renderHotelContent() {
             <span class="text-gray-700 font-medium">${amenity}</span>
           </div>
         `
-          )
-          .join("")}
+      )
+      .join("")}
       </div>
     </section>
 
@@ -184,18 +182,17 @@ function renderHotelContent() {
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         ${Array(6)
-          .fill(currentHotel.image)
-          .map(
-            (img, index) => `
+      .fill(currentHotel.image)
+      .map(
+        (img, index) => `
           <div class="relative aspect-video rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer group">
-            <img src="${img}" alt="Gallery ${
-              index + 1
-            }" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+            <img src="${img}" alt="Gallery ${index + 1
+          }" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
           </div>
         `
-          )
-          .join("")}
+      )
+      .join("")}
       </div>
     </section>
   `;

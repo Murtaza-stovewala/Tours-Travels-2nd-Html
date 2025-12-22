@@ -123,11 +123,10 @@ function renderFilterChips() {
   container.innerHTML = "";
   filterChips.forEach((chip) => {
     const btn = document.createElement("button");
-    btn.className = `px-6 py-2 rounded-full text-sm font-semibold transition-all ${
-      activeFilter === chip
+    btn.className = `px-6 py-2 rounded-full text-sm font-semibold transition-all ${activeFilter === chip
         ? "bg-cyan-500 text-white shadow-lg"
         : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50"
-    }`;
+      }`;
     btn.textContent = chip;
     btn.onclick = () => {
       activeFilter = chip;
@@ -162,14 +161,12 @@ function renderTours() {
 
     card.innerHTML = `
       <div class="relative h-64 overflow-hidden">
-        <img src="${tour.image}" alt="${
-      tour.title
-    }" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-        ${
-          tour.featured
-            ? '<div class="absolute top-4 right-4 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full">FEATURED</div>'
-            : ""
-        }
+        <img src="${tour.image}" alt="${tour.title
+      }" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+        ${tour.featured
+        ? '<div class="absolute top-4 right-4 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full">FEATURED</div>'
+        : ""
+      }
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex justify-between items-end">
           <div class="flex items-center text-white text-xs font-semibold bg-black/30 backdrop-blur-sm px-2 py-1 rounded-md">
             <svg class="h-3 w-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -182,9 +179,8 @@ function renderTours() {
         </div>
       </div>
       <div class="p-6 flex flex-col flex-grow">
-        <h3 class="text-xl font-bold text-gray-800 mb-1 group-hover:text-cyan-600 transition-colors">${
-          tour.title
-        }</h3>
+        <h3 class="text-xl font-bold text-gray-800 mb-1 group-hover:text-cyan-600 transition-colors">${tour.title
+      }</h3>
         <div class="flex items-center text-sm text-gray-500 mb-3">
           <svg class="h-4 w-4 mr-1 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           ${tour.location}
@@ -204,14 +200,13 @@ function renderTours() {
           <div>
             <p class="text-sm text-gray-500">From</p>
             <p class="text-lg font-bold text-gray-800">₹${Number(
-              tour.price
-            ).toLocaleString(
-              "en-IN"
-            )}<span class="text-sm font-normal text-gray-500"> / person</span></p>
+        tour.price
+      ).toLocaleString(
+        "en-IN"
+      )}<span class="text-sm font-normal text-gray-500"> / person</span></p>
           </div>
-          <a href="tour-detail.html?slug=${
-            tour.slug
-          }" class="text-sm font-semibold text-cyan-500 hover:text-cyan-600 flex items-center">
+          <a href="tour-detail.html?slug=${tour.slug
+      }" class="text-sm font-semibold text-cyan-500 hover:text-cyan-600 flex items-center">
             See More <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>

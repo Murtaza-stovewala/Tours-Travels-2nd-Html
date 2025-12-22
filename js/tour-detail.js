@@ -41,21 +41,17 @@ function showNotFound() {
 function renderHero() {
   const hero = document.getElementById("tour-hero");
   hero.innerHTML = `
-    <img src="${currentTour.image}" alt="${
-    currentTour.title
-  }" class="w-full h-full object-cover" />
+    <img src="${currentTour.image}" alt="${currentTour.title
+    }" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
     <div class="absolute bottom-0 left-0 right-0 container mx-auto px-4 sm:px-6 lg:px-8 pb-12 text-white">
       <div class="flex flex-wrap gap-3 mb-4">
-        <span class="bg-cyan-500 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">${
-          currentTour.category
-        }</span>
-        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold flex items-center"><svg class="h-3 w-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> ${
-          currentTour.duration
-        }</span>
-        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold flex items-center"><svg class="h-3 w-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg> Best: ${
-          currentTour.bestSeason
-        }</span>
+        <span class="bg-cyan-500 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">${currentTour.category
+    }</span>
+        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold flex items-center"><svg class="h-3 w-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> ${currentTour.duration
+    }</span>
+        <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold flex items-center"><svg class="h-3 w-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg> Best: ${currentTour.bestSeason
+    }</span>
       </div>
       <h1 class="text-4xl md:text-6xl font-bold mb-2">${currentTour.title}</h1>
       <div class="flex items-center text-lg text-white/90 mb-4">
@@ -79,9 +75,8 @@ function renderContent() {
     <!-- Overview -->
     <section>
       <h2 class="text-2xl font-bold text-gray-800 mb-4">Overview</h2>
-      <p class="text-gray-600 leading-relaxed text-lg">${
-        currentTour.overview
-      }</p>
+      <p class="text-gray-600 leading-relaxed text-lg">${currentTour.overview
+    }</p>
     </section>
 
     <!-- Highlights -->
@@ -89,15 +84,15 @@ function renderContent() {
       <h2 class="text-2xl font-bold text-gray-800 mb-4">Tour Highlights</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         ${currentTour.highlights
-          .map(
-            (h) => `
+      .map(
+        (h) => `
           <div class="flex items-center p-3 bg-white rounded-xl shadow-sm border border-gray-100">
             <svg class="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="text-gray-700 font-medium">${h}</span>
           </div>
         `
-          )
-          .join("")}
+      )
+      .join("")}
       </div>
     </section>
 
@@ -107,21 +102,18 @@ function renderContent() {
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div>
           <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Duration</p>
-          <p class="font-bold text-gray-800 flex items-center"><svg class="h-4 w-4 mr-2 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>${
-            currentTour.duration
-          }</p>
+          <p class="font-bold text-gray-800 flex items-center"><svg class="h-4 w-4 mr-2 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>${currentTour.duration
+    }</p>
         </div>
         <div>
           <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Start / End</p>
-          <p class="font-bold text-gray-800 flex items-center"><svg class="h-4 w-4 mr-2 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>${
-            currentTour.startCity
-          }</p>
+          <p class="font-bold text-gray-800 flex items-center"><svg class="h-4 w-4 mr-2 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>${currentTour.startCity
+    }</p>
         </div>
         <div>
           <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Group Size</p>
-          <p class="font-bold text-gray-800 flex items-center"><svg class="h-4 w-4 mr-2 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>${
-            currentTour.groupSize
-          }</p>
+          <p class="font-bold text-gray-800 flex items-center"><svg class="h-4 w-4 mr-2 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>${currentTour.groupSize
+    }</p>
         </div>
         <div>
           <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Pace</p>
@@ -135,8 +127,8 @@ function renderContent() {
       <h2 class="text-2xl font-bold text-gray-800 mb-6">Itinerary</h2>
       <div class="space-y-4">
         ${currentTour.itinerary
-          .map(
-            (item, idx) => `
+      .map(
+        (item, idx) => `
           <div class="border border-gray-200 rounded-xl bg-white">
             <button onclick="toggleAccordion(${idx})" class="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors">
               <div class="flex items-center text-left">
@@ -150,8 +142,8 @@ function renderContent() {
             </div>
           </div>
         `
-          )
-          .join("")}
+      )
+      .join("")}
       </div>
     </section>
 
@@ -161,30 +153,30 @@ function renderContent() {
         <h3 class="font-bold text-green-800 mb-4 text-lg">Inclusions</h3>
         <ul class="space-y-3">
           ${currentTour.inclusions
-            .map(
-              (inc) => `
+      .map(
+        (inc) => `
             <li class="flex items-start text-gray-700 text-sm">
               <svg class="h-4 w-4 text-green-500 mr-2 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               ${inc}
             </li>
           `
-            )
-            .join("")}
+      )
+      .join("")}
         </ul>
       </div>
       <div class="bg-red-50/50 p-6 rounded-2xl border border-red-100">
         <h3 class="font-bold text-red-800 mb-4 text-lg">Exclusions</h3>
         <ul class="space-y-3">
           ${currentTour.exclusions
-            .map(
-              (exc) => `
+      .map(
+        (exc) => `
             <li class="flex items-start text-gray-700 text-sm">
               <svg class="h-4 w-4 text-red-500 mr-2 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
               ${exc}
             </li>
           `
-            )
-            .join("")}
+      )
+      .join("")}
         </ul>
       </div>
     </section>
@@ -194,12 +186,12 @@ function renderContent() {
       <h2 class="text-2xl font-bold text-gray-800 mb-6">Gallery</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         ${currentTour.gallery
-          .map(
-            (img, idx) => `
+      .map(
+        (img, idx) => `
           <img src="${img}" alt="Gallery ${idx}" class="w-full h-64 object-cover rounded-2xl shadow-sm hover:shadow-lg transition-shadow" />
         `
-          )
-          .join("")}
+      )
+      .join("")}
       </div>
     </section>
   `;
@@ -213,8 +205,8 @@ function renderSidebar() {
         <p class="text-sm text-gray-500">Starting from</p>
         <div class="flex items-end gap-2">
           <span class="text-3xl font-bold text-gray-900">₹${Number(
-            currentTour.price
-          ).toLocaleString("en-IN")}</span>
+    currentTour.price
+  ).toLocaleString("en-IN")}</span>
           <span class="text-gray-500 mb-1">/ person</span>
         </div>
       </div>
