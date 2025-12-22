@@ -151,9 +151,9 @@ function renderFlights() {
 
         <!-- Pills Row -->
         <div class="flex flex-wrap gap-2 justify-center md:justify-center mt-auto">
-          <button class="px-3 py-1 rounded-full border border-cyan-200 text-cyan-600 text-xs font-medium hover:bg-cyan-500 hover:text-white transition-colors">Flight details</button>
-          <button class="px-3 py-1 rounded-full border border-cyan-200 text-cyan-600 text-xs font-medium hover:bg-cyan-500 hover:text-white transition-colors">Fare info</button>
-          <button class="px-3 py-1 rounded-full border border-cyan-200 text-cyan-600 text-xs font-medium hover:bg-cyan-500 hover:text-white transition-colors">Refund</button>
+          <button class="px-3 py-1 btn-rounded border border-cyan-200 text-cyan-600 text-xs font-medium hover:bg-cyan-500 hover:text-white transition-colors">Flight details</button>
+          <button class="px-3 py-1 btn-rounded border border-cyan-200 text-cyan-600 text-xs font-medium hover:bg-cyan-500 hover:text-white transition-colors">Fare info</button>
+          <button class="px-3 py-1 btn-rounded border border-cyan-200 text-cyan-600 text-xs font-medium hover:bg-cyan-500 hover:text-white transition-colors">Refund</button>
         </div>
       </div>
 
@@ -173,7 +173,7 @@ function renderFlights() {
             <span class="text-2xl font-bold text-gray-800">₹${Number(flight.price).toLocaleString('en-IN')}</span>
             <span class="text-xs text-gray-400">/pax</span>
           </div>
-          <a href="flight-detail.html?id=${flight.id}" class="block w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full py-3 shadow-md transition-colors">View Deals</a>
+          <a href="flight-detail.html?id=${flight.id}" class="block w-full bg-orange-500 hover:bg-orange-600 text-white font-bold btn-rounded py-3 shadow-md transition-colors">View Deals</a>
         </div>
       </div>
     `;

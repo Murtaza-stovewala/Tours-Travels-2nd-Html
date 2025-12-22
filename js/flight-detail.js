@@ -33,7 +33,7 @@ function showNotFound() {
   document.body.innerHTML = `
     <div class="h-screen flex items-center justify-center flex-col gap-4">
       <h1 class="text-2xl font-bold">Flight Not Found</h1>
-      <a href="flights.html" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-6 rounded-full">Back to Flights</a>
+      <a href="flights.html" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-6 btn-rounded">Back to Flights</a>
     </div>
   `;
 }
@@ -116,7 +116,7 @@ function renderContent() {
               Baggage Included
             </div>
           </div>
-          <button class="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-8 py-2 font-bold shadow-md">Flight Details</button>
+          <button class="bg-orange-500 hover:bg-orange-600 text-white btn-rounded px-8 py-2 font-bold shadow-md">Flight Details</button>
         </div>
       </div>
     </div>
@@ -262,7 +262,7 @@ function renderBookingCard() {
         </div>
       </div>
       
-      <button onclick="window.location.href='contact.html'" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-6 rounded-xl shadow-lg transition-transform hover:scale-[1.02]">
+      <button onclick="window.location.href='contact.html'" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-6 btn-rounded shadow-lg transition-transform hover:scale-[1.02]">
         Continue Booking
       </button>
     </div>

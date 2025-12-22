@@ -292,7 +292,7 @@ function renderHotels() {
           )}<span class="text-sm font-normal text-gray-500"> / night</span></p>
           </div>
           <a href="hotel-detail.html?slug=${hotel.slug
-        }" class="bg-cyan-500 hover:bg-cyan-600 text-white rounded-full px-6 py-2 font-medium">
+        }" class="bg-cyan-500 hover:bg-cyan-600 text-white btn-rounded px-6 py-2 font-medium">
             Book
           </a>
         </div>

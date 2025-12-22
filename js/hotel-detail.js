@@ -22,7 +22,7 @@ function showNotFound() {
   document.body.innerHTML = `
     <div class="h-screen flex items-center justify-center flex-col gap-4">
       <h1 class="text-2xl font-bold">Hotel Not Found</h1>
-      <a href="index.html" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-6 rounded-full">
+      <a href="index.html" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-6 btn-rounded">
         Go Home
       </a>
     </div>
@@ -236,7 +236,7 @@ function renderBookingCard() {
             24/7 Support
           </li>
         </ul>
-        <button onclick="openBookingModal()" class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-6 rounded-full transition-all transform hover:scale-105 shadow-lg">
+        <button onclick="openBookingModal()" class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-6 btn-rounded transition-all transform hover:scale-105 shadow-lg">
           Book Now
         </button>
         <div class="mt-6 pt-6 border-t border-slate-200">
