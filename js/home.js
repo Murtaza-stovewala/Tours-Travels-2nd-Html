@@ -136,7 +136,7 @@ function renderAboutSection() {
                 </div>
               </div>
             </div>
-            <button class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-2">
+            <button class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 btn-rounded flex items-center gap-2">
               Discover More
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -201,9 +201,8 @@ function renderHotelsSection() {
     <div class="swiper-slide">
       <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
         <div class="relative">
-          <img src="${hotel.image}" alt="${
-        hotel.name
-      }" class="w-full h-64 object-cover">
+          <img src="${hotel.image}" alt="${hotel.name
+        }" class="w-full h-64 object-cover">
           <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
             <svg class="h-5 w-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
@@ -230,13 +229,12 @@ function renderHotelsSection() {
             <div>
               <span class="text-sm text-gray-500">Starting from</span>
               <p class="text-2xl font-bold text-cyan-500">${formatCurrency(
-                hotel.price
-              )}</p>
+          hotel.price
+        )}</p>
               <span class="text-xs text-gray-500">per night</span>
             </div>
-            <a href="hotel-detail.html?slug=${
-              hotel.slug
-            }" class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-full flex items-center gap-1 text-sm font-semibold">
+            <a href="hotel-detail.html?slug=${hotel.slug
+        }" class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 btn-rounded flex items-center gap-1 text-sm font-semibold">
               View
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -271,7 +269,7 @@ function renderHotelsSection() {
         </div>
 
         <div class="text-center mt-12">
-          <a href="hotels.html" class="inline-flex items-center bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full gap-2">
+          <a href="hotels.html" class="inline-flex items-center bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 btn-rounded gap-2">
             View All Hotels
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -317,11 +315,11 @@ function renderFlightsSection() {
         flight.schedule && flight.schedule.length > 0
           ? flight.schedule[0]
           : {
-              airline: flight.airline,
-              depart: "10:00 AM",
-              arrive: "12:00 PM",
-              type: flight.stops,
-            };
+            airline: flight.airline,
+            depart: "10:00 AM",
+            arrive: "12:00 PM",
+            type: flight.stops,
+          };
       const departTime = rep.depart;
       const arriveTime = rep.arrive;
       const airlineName = rep.airline;
@@ -347,16 +345,14 @@ function renderFlightsSection() {
               <div class="text-center md:text-left min-w-[80px]">
                 <p class="text-gray-400 text-xs font-semibold uppercase mb-1">Friday</p>
                 <p class="text-2xl font-bold text-gray-800">${departTime}</p>
-                <p class="text-sm font-bold text-gray-500 mt-1">${
-                  flight.fromCode
-                }</p>
+                <p class="text-sm font-bold text-gray-500 mt-1">${flight.fromCode
+        }</p>
               </div>
 
               <!-- Timeline -->
               <div class="flex-1 flex flex-col items-center px-4 w-full">
-                <span class="text-xs text-gray-400 mb-2">Duration ${
-                  flight.duration
-                }</span>
+                <span class="text-xs text-gray-400 mb-2">Duration ${flight.duration
+        }</span>
                 <div class="relative w-full flex items-center justify-center">
                   <div class="absolute left-0 right-0 h-[2px] border-t-2 border-dotted border-cyan-200"></div>
                   <div class="bg-white p-1 z-10">
@@ -367,18 +363,16 @@ function renderFlightsSection() {
                   <div class="absolute left-0 w-2 h-2 rounded-full bg-cyan-500"></div>
                   <div class="absolute right-0 w-2 h-2 rounded-full bg-cyan-500"></div>
                 </div>
-                <span class="text-xs text-cyan-600 font-medium mt-2 bg-cyan-50 px-2 py-0.5 rounded-full">${
-                  flight.stops
-                }</span>
+                <span class="text-xs text-cyan-600 font-medium mt-2 bg-cyan-50 px-2 py-0.5 rounded-full">${flight.stops
+        }</span>
               </div>
 
               <!-- Arrive -->
               <div class="text-center md:text-right min-w-[80px]">
                 <p class="text-gray-400 text-xs font-semibold uppercase mb-1">Saturday</p>
                 <p class="text-2xl font-bold text-gray-800">${arriveTime}</p>
-                <p class="text-sm font-bold text-gray-500 mt-1">${
-                  flight.toCode
-                }</p>
+                <p class="text-sm font-bold text-gray-500 mt-1">${flight.toCode
+        }</p>
               </div>
             </div>
 
@@ -417,14 +411,13 @@ function renderFlightsSection() {
               <p class="text-gray-400 text-sm mb-1">Start from</p>
               <div class="mb-2">
                 <span class="text-2xl font-bold text-gray-800">₹${flight.price.toLocaleString(
-                  "en-IN"
-                )}</span>
+          "en-IN"
+        )}</span>
                 <span class="text-xs text-gray-400">/pax</span>
               </div>
 
-              <a href="flight-detail.html?slug=${
-                flight.slug
-              }" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full py-3 shadow-md inline-block transition-colors">
+              <a href="flight-detail.html?slug=${flight.slug
+        }" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold btn-rounded py-3 shadow-md inline-block transition-colors">
                 View Deals
               </a>
             </div>
@@ -453,7 +446,7 @@ function renderFlightsSection() {
         </div>
 
         <div class="text-center mt-12">
-          <a href="flights.html" class="bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition-colors inline-flex items-center mx-auto shadow-lg transform hover:scale-105 duration-200">
+          <a href="flights.html" class="bg-cyan-500 text-white font-bold py-3 px-8 btn-rounded hover:bg-cyan-600 transition-colors inline-flex items-center mx-auto shadow-lg transform hover:scale-105 duration-200">
             Discover More
             <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="1"/>
@@ -485,9 +478,8 @@ function renderToursSection() {
     <div class="swiper-slide">
       <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
         <div class="relative">
-          <img src="${tour.image}" alt="${
-        tour.title
-      }" class="w-full h-64 object-cover">
+          <img src="${tour.image}" alt="${tour.title
+        }" class="w-full h-64 object-cover">
           <div class="absolute top-4 left-4 bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
             ${tour.category}
           </div>
@@ -515,12 +507,11 @@ function renderToursSection() {
             <div>
               <span class="text-sm text-gray-500">Starting from</span>
               <p class="text-2xl font-bold text-cyan-500">${formatCurrency(
-                tour.price
-              )}</p>
+          tour.price
+        )}</p>
             </div>
-            <a href="tour-detail.html?slug=${
-              tour.slug
-            }" class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-full flex items-center gap-1 text-sm font-semibold">
+            <a href="tour-detail.html?slug=${tour.slug
+        }" class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 btn-rounded flex items-center gap-1 text-sm font-semibold">
               Explore
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -554,7 +545,7 @@ function renderToursSection() {
         </div>
 
         <div class="text-center mt-12">
-          <a href="tours.html" class="inline-flex items-center bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full gap-2">
+          <a href="tours.html" class="inline-flex items-center bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 btn-rounded gap-2">
             View All Tours
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -609,7 +600,6 @@ function renderWhyChooseSection() {
           <div class="space-y-8">
             <div class="flex items-start group">
               <div class="relative">
-                <div class="bg-red-500 text-white w-8 h-8 flex items-center justify-center rounded-full text-sm font-bold absolute -top-3 -left-3 z-10">01</div>
                 <div class="bg-cyan-500 p-5 rounded-full shadow-lg">
                   <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
@@ -624,7 +614,6 @@ function renderWhyChooseSection() {
 
             <div class="flex items-start group">
               <div class="relative">
-                <div class="bg-red-500 text-white w-8 h-8 flex items-center justify-center rounded-full text-sm font-bold absolute -top-3 -left-3 z-10">02</div>
                 <div class="bg-cyan-500 p-5 rounded-full shadow-lg">
                   <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -639,7 +628,6 @@ function renderWhyChooseSection() {
 
             <div class="flex items-start group">
               <div class="relative">
-                <div class="bg-red-500 text-white w-8 h-8 flex items-center justify-center rounded-full text-sm font-bold absolute -top-3 -left-3 z-10">03</div>
                 <div class="bg-cyan-500 p-5 rounded-full shadow-lg">
                   <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
